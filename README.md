@@ -7,7 +7,7 @@ Mode8fx hello! I hope this doesn't upset you, and thanks for making this game.
 
 Modify your Blockamok Remix save file to get the score you want.
 
-## 🧠 BARsave-editor - v12.01
+## 🧠 BARsave-editor - v12.01-b2
 
 BARsave-editor is a graphical tool built in Python that allows you to safely load and modify save.bin files. It automatically detects integer values ​​in the file and offers functions for inspecting, replacing, and exporting them.
 Key Features:
