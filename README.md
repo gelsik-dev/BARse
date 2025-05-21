@@ -27,5 +27,5 @@ Key Features:
 🛡️ Error handling and detailed validations.
 ### Download links
 
-Stable: https://github.com/gelsik-dev/BARse/releases/tag/Beta
+Stable: https://github.com/gelsik-dev/BARse/releases/tag/Beta-v3
 
