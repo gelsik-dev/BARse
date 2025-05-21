@@ -1,0 +1,29 @@
+VSVersionInfo(
+  ffi=FixedFileInfo(
+    filevers=(1,2,0,2),
+    prodvers=(1,2,0,2),
+    mask=0x3f,
+    flags=0x0,
+    OS=0x4,
+    fileType=0x1,
+    subtype=0x0,
+    date=(0, 0)
+    ),
+  kids=[
+    StringFileInfo([
+      StringTable(
+        '040904B0',
+        [ 
+          StringStruct('CompanyName', 'Gelsik'),
+          StringStruct('FileDescription', 'Modify your Blockamok Remix save file to get the score you want.'),
+          StringStruct('FileVersion', '12.02'),
+          StringStruct('InternalName', 'barse'),
+          StringStruct('LegalCopyright', '© 2025 Gelsik'),
+          StringStruct('OriginalFilename', 'BARse.exe'),
+          StringStruct('ProductName', 'BARse'),
+          StringStruct('ProductVersion', '12.02'),
+        ])
+    ]),
+    VarFileInfo([VarStruct('Translation', [0x0409, 1200])])
+  ]
+)

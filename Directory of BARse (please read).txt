@@ -1,0 +1,4 @@
+The recommended directory for BARse is:
+C:\Program Files (x86)\Gelsik\BARse\v12.02
+
+Please put each update in the BARse folder (I'm too lazy to make an automatic installer :/)

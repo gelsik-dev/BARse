@@ -135,6 +135,8 @@ class BARsaveEditor(tk.Tk):
         self.tree.configure(yscroll=scrollbar.set)
         scrollbar.pack(side="right", fill="y")
 
+        self.tree.bind("<Double-1>", self.on_tree_double_click)
+
         self.status_var = tk.StringVar(value="Waiting for file to load...")
         self.label_status = ttk.Label(
             self,
@@ -143,7 +145,7 @@ class BARsaveEditor(tk.Tk):
             font=("Arial", 10, "italic"),
         )
 
-        footer = "BARsave-editor - © 2025 Gelsik - Version 12.01-b2"
+        footer = "BARsave-editor - © 2025 Gelsik - Version 12.02"
         self.label_footer = ttk.Label(
             self, text=footer, foreground="gray", font=("Arial", 9)
         )
@@ -154,6 +156,27 @@ class BARsaveEditor(tk.Tk):
         self.file_content = None
         self.integers = None
         self.filepath = None
+
+    def on_tree_double_click(self, event):
+        region = self.tree.identify("region", event.x, event.y)
+        if region != "cell":
+            return
+
+        row_id = self.tree.identify_row(event.y)
+        column_id = self.tree.identify_column(event.x)
+        if not row_id or not column_id:
+            return
+
+        item = self.tree.item(row_id)
+        col_index = int(column_id.replace("#", "")) - 1
+        if col_index < 0 or col_index >= len(item["values"]):
+            return
+
+        text_to_copy = str(item["values"][col_index])
+        if text_to_copy:
+            self.clipboard_clear()
+            self.clipboard_append(text_to_copy)
+            self.status_var.set(f"Copied to clipboard: {text_to_copy}")
 
     def validate_values(self):
         try:
